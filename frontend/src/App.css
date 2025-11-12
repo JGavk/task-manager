@@ -1,0 +1,110 @@
+/* ============================================
+   App Container
+   ============================================ */
+#root {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(1rem, 2vw, 2rem);
+  text-align: center;
+  flex: 1;
+}
+
+/* ============================================
+   Logo Styles
+   ============================================ */
+.logo {
+  height: clamp(4em, 10vw, 6em);
+  padding: clamp(1em, 2vw, 1.5em);
+  will-change: filter;
+  transition: filter 300ms ease;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* ============================================
+   Logo Animation
+   ============================================ */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* ============================================
+   Card Styles
+   ============================================ */
+.card {
+  padding: clamp(1.5em, 3vw, 2em);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin: clamp(1.5rem, 3vw, 2rem) 0;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   Documentation Link
+   ============================================ */
+.read-the-docs {
+  color: #888;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  margin-top: clamp(1rem, 2vw, 2rem);
+}
+
+/* ============================================
+   Tablet Styles (768px and below)
+   ============================================ */
+@media (max-width: 768px) {
+  #root {
+    padding: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .logo {
+    height: clamp(3.5em, 8vw, 5em);
+  }
+
+  .card {
+    padding: clamp(1.25em, 2.5vw, 1.75em);
+  }
+}
+
+/* ============================================
+   Mobile Styles (480px and below)
+   ============================================ */
+@media (max-width: 480px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .logo {
+    height: clamp(3em, 7vw, 4em);
+  }
+
+  .card {
+    padding: 1.25em;
+    margin: 1rem 0;
+  }
+
+  .read-the-docs {
+    font-size: 0.85rem;
+  }
+}
