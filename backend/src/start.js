@@ -5,7 +5,7 @@ require('dotenv').config();
 (async () => {
   try {
     await db.sequelize.authenticate();
-    // For development only. Use migrations in production.
+
     await db.sequelize.sync({ alter: true });
     console.log('DB connected and synced');
 
